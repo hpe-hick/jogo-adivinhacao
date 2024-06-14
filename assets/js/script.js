@@ -24,6 +24,7 @@ let guessButton = document.getElementById('guessButton');
 
 var audio = document.getElementById("myAudio");
 let index = 0;
+let soundStartGame = "assets/sounds/playing.mp3";
 let soundVictory = "victory.mp3";
 let soundGameOver = "game-over.mp3";
 
@@ -159,3 +160,4 @@ audio.addEventListener('ended', () => {
     if (index == 0)
     audio.play();
 })
+
