@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Jogo de adivinhação de números</h1>
+        <div id="sub-container-game" class="element-hidden">
+            <p>Adivinhe um número entre 1 e 100:</p>
+            <input type="number" id="guessInput" min="1" max="100">
+            <button id="guessButton" onclick="checkGuess()">Adivinhar</button>
+            <p id="resultMessage"></p>
+            <p id="attemptsMessage"></p>
+            <p id="guessedNumbersMessage"></p>
+        </div>
+        
+        <div id="div-start-game" class="element-appers">
+            <button onclick="startGame()">Iniciar</button>
+        </div>
+    </div>
+
+    <audio id="myAudio">
+        <source src="assets/sounds/playing.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
