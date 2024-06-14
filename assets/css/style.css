@@ -1,5 +1,5 @@
 body {
-  font-family: cursive;
+  font-family: 'Permanent Marker', cursive;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +21,6 @@ body {
 }
 
 h1 {
-  font-family: 'Permanent Marker', cursive;
   margin-bottom: 20px;
   font-size: 2.5em;
   color: #ff7e5f;
