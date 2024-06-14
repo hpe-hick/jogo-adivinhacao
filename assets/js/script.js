@@ -121,7 +121,7 @@ function checkGuess() {
                 endGame();
             }
 
-            guessedNumbersMessage.textContent = `Guessed numbers: ${guessedNumbers.join(', ')}`;
+            guessedNumbersMessage.textContent = `Números tentados: ${guessedNumbers.join(', ')}`;
         }
     }
 
