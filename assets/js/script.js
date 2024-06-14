@@ -9,7 +9,6 @@ function startGame(){
 }
 
 let guessInput = document.getElementById('guessInput');
-let soundStartGame = "assets/sounds/playing.mp3";
 let randomNumber = Math.floor(Math.random() * 100) + 1;
 let attempts = 0;
 const maxAttempts = 6;
@@ -87,6 +86,7 @@ function checkGuess() {
                 attempts++;
                 if (userGuess == randomNumber) {
                     victory();
+                    index = 1;
                     resultMessage.textContent = 'Parabéns! Você acertou!';
                     resultMessage.style.color = 'green';
                     endGame();
@@ -114,6 +114,7 @@ function checkGuess() {
 
             if (attempts >= maxAttempts && userGuess != randomNumber) {
                 gameOver();
+                index = 2;
                 resultMessage.textContent = `Fim de Jogo! O número era ${randomNumber}.`;
                 resultMessage.style.color = 'red';
                 endGame();
@@ -135,6 +136,7 @@ function resetGame() {
     elementWasInserted = false;
     audio.src = soundStartGame;
     audio.play();
+    index = 0;
     randomNumber = Math.floor(Math.random() * 100) + 1;
     attempts = 0;
     guessedNumbers = [];
@@ -154,8 +156,6 @@ guessInput.addEventListener('keydown', (e) => {
 
 console.log(audio.src)
 audio.addEventListener('ended', () => {
-    if (audio.src != soundStartGame)
-    audio.pause();
-    else audio.play();
+    if (index == 0)
+    audio.play();
 })
-
